@@ -21,7 +21,7 @@ main:
 	
 	sleep 1 ' about 2.5 seconds
 	random w0
-	if b0 < 200 then
+	if b0 < 150 then
 		goto main
 	endif 
 
