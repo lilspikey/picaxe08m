@@ -1,42 +1,47 @@
 symbol BLINK_SPACE = 200
 
+symbol EYE1 = 1
+symbol EYE2 = 2
+symbol EYE3 = 4
+
 init:
 	' seed random number generator
 	let w0 = 89
 main:
 	' turn on eyes
-	high 1
-	high 2
-	high 4
-	sleep 1
-	if b0 > 200 then
-		sleep 1
-	endif
+	high EYE1
+	high EYE2
+	high EYE3
+	'sleep 1
+	nap 6 ' about a second
+	'random w0
+	'if w0 < 100 then
+	'	goto main
+	'endif 
 	random w0
 	if b0 < 100 then
-		low 1
+		low EYE1
 		pause BLINK_SPACE
 		pause BLINK_SPACE
 		pause BLINK_SPACE
 	elseif b0 < 200 then
-		low 1
+		low EYE1
 		pause BLINK_SPACE
-		low 2
+		low EYE2
 		pause BLINK_SPACE
 		pause BLINK_SPACE
-		high 1
+		high EYE1
 		pause BLINK_SPACE
 	else
-		low 1
+		low EYE1
 		pause BLINK_SPACE
-		low 2
+		low EYE2
 		pause BLINK_SPACE
-		low 4
+		low EYE3
 		pause BLINK_SPACE
-		high 1
+		high EYE1
 		pause BLINK_SPACE
-		high 2
+		high EYE2
 		pause BLINK_SPACE
 	endif
-
 	goto main
