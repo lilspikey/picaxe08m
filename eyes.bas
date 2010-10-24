@@ -1,12 +1,15 @@
 symbol BLINK_SPACE = 200
 
-symbol EYE1 = 1
-symbol EYE2 = 2
-symbol EYE3 = 4
+symbol EYE1 = b2
+symbol EYE2 = b3
+symbol EYE3 = b4
 
 init:
 	' seed random number generator
 	let w0 = 89
+	let EYE1 = 1
+	let EYE2 = 2
+	let EYE3 = 4
 main:
 	' turn on eyes
 	high EYE1
