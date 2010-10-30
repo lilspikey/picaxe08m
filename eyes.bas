@@ -1,4 +1,4 @@
-symbol BLINK_SPACE = 200
+symbol BLINK_SPACE = 150
 
 symbol EYE1 = b2
 symbol EYE2 = b3
@@ -7,7 +7,7 @@ symbol CHOSEN_EYE = b5
 
 init:
 	' seed random number generator
-	let w0 = 89
+	let w0 = 2077
 	let EYE1 = 1
 	let EYE2 = 2
 	let EYE3 = 4
@@ -21,7 +21,7 @@ main:
 	
 	sleep 1 ' about 2.5 seconds
 	random w0
-	if b0 < 150 then
+	if b0 < 100 then
 		goto main
 	endif 
 
